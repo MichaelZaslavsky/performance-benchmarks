@@ -2,3 +2,6 @@
 
 # Default severity for analyzer diagnostics with category 'Performance'
 dotnet_analyzer_diagnostic.category-Performance.severity = none
+
+# Default severity for all analyzer diagnostics
+dotnet_analyzer_diagnostic.severity = none
