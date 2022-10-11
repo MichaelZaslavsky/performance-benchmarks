@@ -74,8 +74,14 @@ public class HashingAlgorithms
         instance.Salt = Encoding.ASCII.GetBytes("Some Salt");
         instance.DegreeOfParallelism = 4;
         instance.Iterations = 2;
-        instance.MemorySize = 1024;
+        instance.MemorySize = 1024 * 1024;
 
         instance.GetBytes(16);
+    }
+
+    [Benchmark]
+    public void ComputeBcrypt()
+    {
+        BCrypt.Net.BCrypt.HashPassword("Some Text");
     }
 }
