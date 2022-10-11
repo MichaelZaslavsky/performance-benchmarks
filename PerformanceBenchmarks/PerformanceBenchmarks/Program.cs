@@ -1,4 +1,4 @@
 ﻿using BenchmarkDotNet.Running;
 using PerformanceBenchmarks;
 
-BenchmarkRunner.Run<HashingAlgorithms>();
+BenchmarkRunner.Run<StringBuilderInitialization>();

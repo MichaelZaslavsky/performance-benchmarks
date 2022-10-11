@@ -5,9 +5,9 @@ namespace PerformanceBenchmarks;
 /// <summary>
 /// <para>
 /// Check: Differences between initializing a list with/without a capacity.
-/// Conclusion: If the count is known, it is recommended to specify the count as it is faster and uses less memory allocation.
-/// Reason: If not specifying the list's capacity, the list is initialized with the 4 elements, and each time a new element is added to the list, it first checks
-///         that the array capacity has the interior reached its maximum capacity.
+/// Conclusion: If the count is known, it is recommended to specify the capacity as it is faster and uses less memory allocation.
+/// Reason: If not specifying the list's capacity, the list is initialized with 4 elements, and each time a new element is added to the list, it first checks
+///         whether the array's capacity has reached its maximum.
 ///         If it reaches the maximum value, it creates a new array twice the length of the previous array,
 ///         copies all the elements of the previous array into the new array, and then adds the new element to the array.
 ///         By specifying the list's capacity, we eliminate the cost of new array prototyping and copying.
